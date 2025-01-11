@@ -5,7 +5,7 @@
 <br/>
 <br/>
 
-![preview](./preview.png) 
+![preview](./assets/preview.png) 
 
 <br/>
 <br/>
@@ -17,21 +17,21 @@
 1. Using `Lazy`:
 
 ```lua
-{ 'my-user/my-theme.nvim' },
+{ 'datsfilipe/gruvbox.nvim' },
 ```
 
 2. Using `Packer`:
 
 ```lua
-use 'my-user/my-theme.nvim'
+use 'datsfilipe/gruvbox.nvim'
 ```
 
 ## Configuration
 
-To configure the plugin, you can call require('my-theme').setup({}), passing the table with the values in it. The following are the **defaults**:
+To configure the plugin, you can call require('gruvbox').setup({}), passing the table with the values in it. The following are the **defaults**:
 
 ```lua
-require('my-theme').setup({
+require('gruvbox').setup({
     transparent = false, -- Boolean: Sets the background to transparent
     italics = {
         comments = true, -- Boolean: Italicizes comments
@@ -46,7 +46,7 @@ require('my-theme').setup({
 
 - **The `colorscheme()` function**
 
-This function can be used to set the colorscheme in your editor, however, if it doesn't work for you, you can always use `vim.cmd.colorscheme('my-theme')`.
+This function can be used to set the colorscheme in your editor, however, if it doesn't work for you, you can always use `vim.cmd.colorscheme('gruvbox')`.
 
 ### Specifics for Some Plugins
 
@@ -56,7 +56,7 @@ To use the theme with [bufferline.nvim](https://github.com/akinsho/bufferline.nv
 
 ```lua
 require('bufferline').setup({
-    highlights = require('my-theme').bufferline.highlights,
+    highlights = require('gruvbox').bufferline.highlights,
 })
 ```
 
