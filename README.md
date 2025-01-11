@@ -1,6 +1,64 @@
-# Neovim Colorscheme Template
+<div align="center">
 
-This aims to make your life a lot easier when creating your colorscheme. You should change change colors, names and do a bit of fine tuning for your specific needs! If you like the project, leave a star here.
+# My Theme
+
+<br/>
+<br/>
+
+![preview](./preview.png) 
+
+<br/>
+<br/>
+
+</div>
+
+## Installation
+
+1. Using `Lazy`:
+
+```lua
+{ 'my-user/my-theme.nvim' },
+```
+
+2. Using `Packer`:
+
+```lua
+use 'my-user/my-theme.nvim'
+```
+
+## Configuration
+
+To configure the plugin, you can call require('my-theme').setup({}), passing the table with the values in it. The following are the **defaults**:
+
+```lua
+require('my-theme').setup({
+    transparent = false, -- Boolean: Sets the background to transparent
+    italics = {
+        comments = true, -- Boolean: Italicizes comments
+        keywords = true, -- Boolean: Italicizes keywords
+        functions = true, -- Boolean: Italicizes functions
+        strings = true, -- Boolean: Italicizes strings
+        variables = true, -- Boolean: Italicizes variables
+    },
+    overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
+})
+```
+
+- **The `colorscheme()` function**
+
+This function can be used to set the colorscheme in your editor, however, if it doesn't work for you, you can always use `vim.cmd.colorscheme('my-theme')`.
+
+### Specifics for Some Plugins
+
+#### Bufferline.nvim
+
+To use the theme with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim), you can use the following configuration:
+
+```lua
+require('bufferline').setup({
+    highlights = require('my-theme').bufferline.highlights,
+})
+```
 
 ## Contributing
 
