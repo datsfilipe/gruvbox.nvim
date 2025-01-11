@@ -1,5 +1,5 @@
-local colorscheme = require 'my-theme.colorscheme'
-local config = require 'my-theme.config'
+local colorscheme = require 'gruvbox.colorscheme'
+local config = require 'gruvbox.config'
 local theme = {}
 
 local bg = config.transparent and 'NONE' or colorscheme.editorBackground

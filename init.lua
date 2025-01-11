@@ -1,3 +1,4 @@
+vim.hl = vim.highlight
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.guicursor = 'a:blinkon6'
@@ -72,7 +73,7 @@ end
 vim.opt.rtp = vim.opt.rtp ^ lazypath
 
 require('lazy').setup {
-  root = vim.fn.stdpath 'data' .. '/my-theme/lazy',
+  root = vim.fn.stdpath 'data' .. '/gruvbox/lazy',
   spec = {
     {
       'stevearc/oil.nvim',
@@ -328,18 +329,10 @@ require('lazy').setup {
   },
 }
 
-local theme = require 'my-theme/init'
+local theme = require 'gruvbox/init'
 
 theme.setup {
-  theme = 'dark',
-  transparent = true,
-  italics = {
-    comments = false,
-    keywords = true,
-    functions = true,
-    strings = false,
-    variables = true,
-  },
+  transparent = false,
 }
 
 theme.colorscheme()
